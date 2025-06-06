@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+body{
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+
+}
+
+.baner{
+    position: relative;
+    width: 100%;
+    height: 19rem;
+    overflow: hidden;
+}
+
+.rotacion{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+    animation: deslizar 9s infinite;
+}
+
+.image1{
+    background-image: url(/imagenes/1ind.jpeg);
+    animation-delay: 0s;
+}
+
+.image2{
+    background-image: url(/imagenes/2inde.jpeg);
+    animation-delay: 3s;
+}
+
+.image3{
+    background-image: url(/imagenes/3inde.webp);
+    animation-delay: 6s;
+}
+
+.texto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 80%;
+    max-width: 800px;
+    z-index: 10;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    text-shadow: 20px solid black;
+}
+
+.texto h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+
+}
+
+.texto p{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.boton{
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: red;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+    font-size: 1.2rem;
+    border: 2px solid red;
+}
+
+.boton:hover{
+    background-color: transparent;
+    color: red;
+}
+
+
+.menu {
+    background-color: #2c3e50;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 20px;
+}
+
+.opciones li {
+    margin: 0;
+}
+
+.opciones li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.opciones li a:hover {
+    background-color: #34495e;
+    color: #ffffff;
+}
+
+
+.opciones li a.active {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: rgb(0, 0, 0);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer address {
+    font-style: normal;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+
+@media (max-width: 48rem) {
+    .opciones {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .texto h1{font-size: 2rem;}
+
+    .texto p{
+    font-size: 1rem;
+    }
+    .texto .boton{
+        padding: 0.8rem 1.2rem;
+        font-size: 0.8rem;
+    }
+}
+
+iframe{
+    width: 100%;
+    height: 45rem;
+    border: none;
+}
+
+@keyframes deslizar {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/* @media (max-width: 600px) {
+    .texto {
+        flex-direction: column;
+        gap: 10px;
+    }
+} */

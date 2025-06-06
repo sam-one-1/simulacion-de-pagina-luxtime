@@ -1,0 +1,112 @@
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f5f2;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #000;
+    margin: 2rem 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.titulo-principal::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: #c0a062;
+    margin: 15px auto;
+}
+
+.testimonios-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Estilos para cada testimonio */
+.testimonio {
+    display: flex;
+    margin-bottom: 4rem;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.testimonio:hover {
+    transform: translateY(-5px);
+}
+
+.texto-testimonio {
+    padding: 2.5rem;
+    flex: 1;
+}
+
+.testimonio h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.cargo {
+    display: block;
+    font-size: 0.9rem;
+    color: #c0a062;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.testimonio p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+
+.imagen-testimonio {
+    flex: 1;
+    min-height: 300px;
+}
+
+.imagen-testimonio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.testimonio-derecha {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    .testimonio {
+        flex-direction: column;
+    }
+    
+    .testimonio-derecha {
+        flex-direction: column;
+    }
+    
+    .imagen-testimonio {
+        width: 100%;
+        min-height: 200px;
+    }
+    
+    .texto-testimonio {
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,126 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f5f2;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.contacto-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #c0a062;
+    margin: 15px auto;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+label.required::after {
+    content: "*";
+    color: #e74c3c;
+    margin-left: 4px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #c0a062;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(192, 160, 98, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.hint {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #777;
+}
+
+
+input:invalid:not(:focus):not(:placeholder-shown),
+textarea:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #e74c3c;
+    background-color: #fff6f6;
+}
+
+input:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown) {
+    border-color: #2ecc71;
+    background-color: #f6fff6;
+}
+
+
+.submit-btn {
+    background-color: #c0a062;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #b59555;
+}
+
+@media (max-width: 768px) {
+    .contacto-container {
+        margin: 20px;
+        padding: 20px;
+    }
+}
